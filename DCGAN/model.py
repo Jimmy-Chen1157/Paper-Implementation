@@ -75,9 +75,9 @@ def test():
     N, in_channels, H, W = 1, 3, 64, 64
     z_dim = 100
     x = torch.randn((N, in_channels, H, W))
-    disc = Discriminator(in_channels, 8)
+    disc = Discriminator(in_channels, 64)
     print(disc(x).size())
-    gen = Generator(z_dim, in_channels, 8)
+    gen = Generator(z_dim, in_channels, 64)
     z = torch.randn((N, z_dim, 1, 1))
     print(gen(z).size())
 
